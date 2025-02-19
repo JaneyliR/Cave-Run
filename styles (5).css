@@ -1,0 +1,85 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+
+#character{
+  width: 150px;
+  height: 150px;
+  background-image: url("https://assets.onecompiler.app/439fakb2q/439f9tj8g/pixil-frame-0%20(2).png");
+  background-size: cover;
+  position: relative; 
+  top: 205px; /* starts at the ground ...nto anynmore*/
+  /*animation: run 0.2s steps(1) infinite;*/
+}
+@keyframes run {
+  0%{background-image: url("https://assets.onecompiler.app/439fakb2q/439f9tj8g/pixil-frame-0%20(2).png"); }
+  50%{background-image: url("https://assets.onecompiler.app/439fakb2q/439f9tj8g/pixil-frame-1%20(2).png");}
+  100%{background-image: url("https://assets.onecompiler.app/439fakb2q/439f9tj8g/pixil-frame-0%20(2).png");}
+}
+
+@keyframes jump {
+  0%{top: 205px;}
+  30%{top: 120px;}
+  70%{top: 12px;}
+  100%{top: 205px;}
+}
+.animate {
+  animation: jump 500ms ease-out; /* ease-out - can be changed*/
+  
+}
+
+#block {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute; /* differences between absoluate and relative?? */
+  top: 227px;
+  left: 400px;
+  animation: block 1.5s infinite linear;
+}
+@keyframes block{
+  0%{left:480px;}
+  100%{left:-40px;}
+}
+#score {
+  position: absolute;
+  top:10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+#highScore {
+  position: absolute;
+  bottom:10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+#restartButton {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#game{
+  width: 900px;
+  height: 400px;
+  border: 5px solid black;
+  background-image: url("https://assets.onecompiler.app/439fakb2q/439f9tj8g/pixil-frame-2%20(3).png");
+  position: relative;
+  overflow: hidden;
+  
+}
